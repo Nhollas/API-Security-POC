@@ -1,0 +1,17 @@
+config.nswag
+obj/
+bin/
+.vscode/
+.vs/
+.run/
+.idea/
+.git/
+
+**/bin/*
+**/obj/*
+**/node_modules/*
+**/appsettings.json
+**/appsettings.Development.json
+**/.next
+.DS_Store
+
