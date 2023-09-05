@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace Http.Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 [Authorize]
-public class AccountController : ControllerBase
+public class SubscriptionController : ControllerBase
 {
-    [HttpGet("Me")]
+    [HttpGet]
     public IActionResult Get()
     {
         var items = new List<Subscription>()
@@ -19,7 +19,9 @@ public class AccountController : ControllerBase
         };
         
         var user = HttpContext.User;
-        
+
+        var token = HttpContext.Request.Headers.Authorization.ToString();
+
         var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
         
         var subscription = items.FirstOrDefault(x => x.OwnerId == userId);

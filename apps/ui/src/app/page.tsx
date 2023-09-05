@@ -1,12 +1,18 @@
 import { UserButton, auth } from "@clerk/nextjs";
 import axios from "axios";
+import https from "https";
 
 export default async function Home() {
   const { getToken } = auth();
 
+  const httpsAgent = new https.Agent({
+    rejectUnauthorized: false,
+  });
+
   const { data: subscription } = await axios.get(
-    "http://localhost:5153/account/me",
+    "https://localhost:7105/api/subscription",
     {
+      httpAgent: httpsAgent,
       headers: {
         authorization: "Bearer " + (await getToken()),
       },
@@ -16,9 +22,10 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className="text-4xl font-bold">Welcome to your Clerk app!</h1>
+      <h2 className="text-2xl font-semibold">Your Subscription</h2>
       <pre className="text-sm">{JSON.stringify(subscription, null, 4)}</pre>
       <UserButton afterSignOutUrl="/" />
-      <p className="w-full max-w-3xl">Example Token: {await getToken()}</p>
+      <p className="w-full max-w-3xl break-all">Example Token: {await getToken()}</p>
       <div className="flex space-x-4">
         <a
           href="https://nextjs.org/docs"
