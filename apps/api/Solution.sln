@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService", "PaymentService\PaymentService.csproj", "{B9D17B2F-274E-4D95-AEB1-E58DD4A0D574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineService", "EngineService\EngineService.csproj", "{9F6CEFA3-2FBA-4105-870E-164530F24562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{6CF16310-8EF2-4DCD-8682-7AEFB4662105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9D17B2F-274E-4D95-AEB1-E58DD4A0D574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D17B2F-274E-4D95-AEB1-E58DD4A0D574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D17B2F-274E-4D95-AEB1-E58DD4A0D574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D17B2F-274E-4D95-AEB1-E58DD4A0D574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6CEFA3-2FBA-4105-870E-164530F24562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6CEFA3-2FBA-4105-870E-164530F24562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6CEFA3-2FBA-4105-870E-164530F24562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6CEFA3-2FBA-4105-870E-164530F24562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF16310-8EF2-4DCD-8682-7AEFB4662105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF16310-8EF2-4DCD-8682-7AEFB4662105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF16310-8EF2-4DCD-8682-7AEFB4662105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF16310-8EF2-4DCD-8682-7AEFB4662105}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

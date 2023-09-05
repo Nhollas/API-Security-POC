@@ -1,4 +1,4 @@
-using Http.Api;
+using SharedLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
-
 builder.Services.AddClerk(config);
 
 var app = builder.Build();
@@ -25,6 +24,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(x => 
+    x.AllowAnyHeader()
+        .AllowAnyMethod()
+        .WithOrigins("http://localhost:3000"));
 
 app.UseAuthorization();
 

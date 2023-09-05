@@ -2,7 +2,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Http.Api.Controllers;
+namespace EngineService.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
